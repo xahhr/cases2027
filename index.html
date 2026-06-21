@@ -1,277 +1,1137 @@
 <!DOCTYPE html>
-<!-- saved from url=(0144)file:///C:/Users/Elgha/Downloads/%D8%AA%D8%B9%D8%A7%D9%81%D9%8A%2084%20%E2%80%94%20%D8%AE%D8%B7%D8%A9%2012%20%D8%A3%D8%B3%D8%A8%D9%88%D8%B9.html -->
+<!-- saved from url=(0149)file:///C:/Users/Elgha/Downloads/%D9%86%D8%B8%D8%A7%D9%85_%D9%82%D9%8A%D8%AF_%D8%A7%D9%84%D9%82%D8%B6%D8%A7%D9%8A%D8%A7_%D8%B2%D9%81%D8%AA%D9%89.html -->
 <html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>تعافي 84 — خطة 12 أسبوع</title>
-<link rel="manifest" href="data:application/manifest+json,{%0A  \" name\":="" \"تعافي="" 84\",="" \"short_name\":="" \"تعافي\",="" \"start_url\":="" \".\",="" \"display\":="" \"standalone\",="" \"background_color\":="" \"#f5f5f5\",="" \"theme_color\":="" \"#222\",="" \"icons\":="" [{="" \"src\":="" \"data:image="" svg+xml,%3csvg="" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" %3e%3ctext="" y=".9em" font-size="90" %3echart%3c="" text%3e%3c="" svg%3e\",="" \"sizes\":="" \"any\"="" }]="" }"=""><style>
-  :root {
-    /* الوضع الفاتح (الافتراضي الجديد) */
-    --bg: #f5f7fa;
-    --card: #ffffff;
-    --text: #0f172a;
-    --muted: #64748b;
-    --border: #e2e8f0;
-    --header-bg: #ffffffee;
-    --input-bg: #f8fafc;
-    --btn-bg: #ffffff;
-    --btn-text: #0f172a;
-    --accent: #16a34a;
-    --accent-bg: #dcfce7;
-    --accent-border: #86efac;
-    --accent-text: #166534;
-    --warn-bg: #fef3c7;
-    --warn-border: #fde047;
-    --warn-text: #92400e;
-    --danger: #e11d48;
-    --danger-bg: #ffe4e6;
-    --danger-border: #fda4af;
-    --danger-text: #9f1239;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>النيابة الإدارية — نظام قيد القضايا 2026</title>
+<style>
+  :root{
+    --blue:#1e66a8; --blue-dark:#15507f; --blue-light:#eaf2fa;
+    --bg:#f3f4f7; --card:#ffffff; --border:#dde1e7; --border-soft:#eceef2;
+    --text:#1b1e24; --text-soft:#5d6470; --text-faint:#9197a3;
+    --green-bg:#e7f4e6; --green-tx:#2f6e2c;
+    --blue-bg:#e5f0fb; --blue-tx:#1c5e9c;
+    --amber-bg:#fbf0dd; --amber-tx:#8a5a0c;
+    --pink-bg:#fbe9f1; --pink-tx:#9c3b63;
+    --purple-bg:#eeebfc; --purple-tx:#4b3f9e;
+    --red-bg:#fbeaea; --red-tx:#a73636;
+    --shadow-sm:0 1px 2px rgba(20,22,30,.04), 0 1px 1px rgba(20,22,30,.03);
+    --shadow-md:0 4px 14px rgba(20,22,30,.07), 0 1px 3px rgba(20,22,30,.05);
+    --shadow-lg:0 16px 48px rgba(20,22,30,.16), 0 4px 14px rgba(20,22,30,.08);
   }
-
-  body.night {
-    /* الوضع الليلي (يتم تفعيله بالزر) */
-    --bg: #0b1220;
-    --card: #10192e;
-    --text: #e9eef7;
-    --muted: #99a3b3;
-    --border: #1f2a44;
-    --header-bg: #0b1220ee;
-    --input-bg: #0c1426;
-    --btn-bg: #0c1426;
-    --btn-text: #e6eefb;
-    --accent: #4ade80;
-    --accent-bg: #12311e;
-    --accent-border: #1f7a3e;
-    --accent-text: #d7ffe1;
-    --warn-bg: #32240d;
-    --warn-border: #9a6a10;
-    --warn-text: #fff3cd;
-    --danger: #fb7185;
-    --danger-bg: #3a1521;
-    --danger-border: #a61b42;
-    --danger-text: #ffe4ea;
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI','Cairo',Tahoma,Arial,sans-serif;direction:rtl;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:28px 20px 70px}
+  .top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--border-soft)}
+  .top-bar h1{font-size:21px;font-weight:700;color:var(--text);letter-spacing:-.2px}
+  .top-bar .subtitle{font-size:13px;color:var(--text-soft);margin-top:4px}
+  .top-actions{display:flex;gap:8px;flex-wrap:wrap}
+  .stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:26px}
+  .stat{background:var(--card);border:1px solid var(--border-soft);border-radius:12px;padding:15px 17px;box-shadow:var(--shadow-sm);transition:.15s}
+  .stat:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+  .stat.highlight{background:linear-gradient(135deg,var(--blue-light),var(--blue-bg));border-color:#cfe1f3}
+  .stat.highlight .val{color:var(--blue-tx)}
+  .stat.highlight .lbl{color:var(--blue-tx);opacity:.85}
+  .stat .val{font-size:25px;font-weight:800;color:var(--text);letter-spacing:-.5px}
+  .stat .lbl{font-size:11.5px;color:var(--text-soft);margin-top:4px;font-weight:500}
+  .toolbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+  .toolbar input,.toolbar select{padding:9px 13px;font-size:13.5px;border:1px solid var(--border);border-radius:9px;background:var(--card);color:var(--text);min-width:0;transition:.15s}
+  .toolbar input:focus,.toolbar select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-light)}
+  .toolbar input{flex:1;min-width:180px}
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 17px;font-size:13px;border:1px solid var(--border);border-radius:9px;background:var(--card);color:var(--text);cursor:pointer;white-space:nowrap;font-weight:600;transition:.15s}
+  .btn:hover{background:#f3f4f6;border-color:#cfd3da}
+  .btn:active{transform:scale(.97)}
+  .btn.primary{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:var(--shadow-sm)}
+  .btn.primary:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
+  .btn.sm{padding:5px 10px;font-size:12px;border-radius:7px}
+  .btn.danger{color:var(--red-tx);border-color:#f0c4c4}
+  .btn.danger:hover{background:var(--red-bg)}
+  .card{background:var(--card);border:1px solid var(--border-soft);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+  .table-wrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{background:#f9fafb;padding:11px 13px;text-align:right;font-weight:700;font-size:11.5px;color:var(--text-soft);border-bottom:1px solid var(--border-soft);white-space:nowrap;letter-spacing:.1px}
+  td{padding:11px 13px;border-bottom:1px solid var(--border-soft);color:var(--text);vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:#f9fafb}
+  .badge{display:inline-block;padding:4px 11px;border-radius:20px;font-size:11px;font-weight:700;white-space:nowrap;letter-spacing:.1px}
+  .b-hafz{background:var(--green-bg);color:var(--green-tx)}
+  .b-hafz2{background:var(--blue-bg);color:var(--blue-tx)}
+  .b-tahqiq{background:var(--amber-bg);color:var(--amber-tx)}
+  .b-ikhtisas{background:var(--pink-bg);color:var(--pink-tx)}
+  .b-ard{background:var(--purple-bg);color:var(--purple-tx)}
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(15,17,22,0.55);align-items:flex-start;justify-content:center;z-index:1000;padding:3vh 16px;overflow-y:auto;backdrop-filter:blur(2px)}
+  .modal-overlay.show{display:flex}
+  .modal{background:var(--card);border-radius:16px;padding:24px;width:100%;max-width:600px;max-height:94vh;overflow-y:auto;margin:auto;box-shadow:var(--shadow-lg)}
+  .modal.wide{max-width:900px}
+  .modal h3{font-size:18px;font-weight:800;margin-bottom:18px;letter-spacing:-.2px}
+  .form-row{margin-bottom:14px}
+  .form-row label{display:block;font-size:12px;color:var(--text-soft);margin-bottom:6px;font-weight:600}
+  .form-row input,.form-row select,.form-row textarea{width:100%;padding:9px 12px;font-size:13px;border:1px solid var(--border);border-radius:9px;background:var(--card);color:var(--text);font-family:inherit;transition:.15s}
+  .form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-light)}
+  .form-row textarea{resize:vertical;min-height:55px}
+  .modal-actions{display:flex;gap:8px;margin-top:20px;align-items:center}
+  .pages{display:flex;align-items:center;gap:10px;padding:13px 16px;font-size:13px;color:var(--text-soft);border-top:1px solid var(--border-soft)}
+  .no-data{text-align:center;padding:40px;color:var(--text-soft);font-size:14px}
+  .day-badge{font-size:11px;background:#eef0f3;color:var(--text-soft);padding:2px 8px;border-radius:6px;font-weight:600}
+  .entity-tag{font-size:11.5px;color:var(--text-soft);font-weight:500}
+  .icon-link{color:var(--blue-tx);text-decoration:none;font-size:12.5px;display:inline-flex;align-items:center;gap:3px;font-weight:600}
+  .icon-link.muted{color:#c0c4cb}
+  .section-title{font-size:17px;font-weight:800;margin:34px 0 14px;display:flex;align-items:center;gap:8px;letter-spacing:-.2px}
+  .req-row{display:grid;grid-template-columns:1.3fr 1.1fr 1fr 0.9fr auto;gap:7px;align-items:center;margin-bottom:8px;background:#f9fafb;padding:8px 10px;border-radius:9px}
+  .req-row input,.req-row select{font-size:12px;padding:7px 9px;border:1px solid var(--border);border-radius:7px;background:#fff;color:var(--text)}
+  .req-row .rm{cursor:pointer;color:var(--red-tx);font-size:18px;text-align:center;user-select:none;transition:.15s}
+  .req-row .rm:hover{transform:scale(1.15)}
+  .agenda-card{border:1px solid var(--border-soft);border-radius:14px;padding:17px 19px;margin-bottom:12px;background:var(--card);box-shadow:var(--shadow-sm)}
+  .agenda-card.urgent{border-color:#f0b0b0;background:#fffafa}
+  .agenda-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+  .agenda-head .id{font-weight:800;font-size:14px}
+  .agenda-head .date{font-size:12px;color:var(--blue-tx);background:var(--blue-bg);padding:5px 12px;border-radius:20px;white-space:nowrap;font-weight:700}
+  .agenda-card.urgent .date{background:var(--red-bg);color:var(--red-tx)}
+  .agenda-subj{font-size:13px;color:var(--text-soft);margin-bottom:11px}
+  .req-list-view{display:flex;flex-direction:column;gap:5px}
+  .req-item-view{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:7px 11px;background:#f9fafb;border-radius:8px}
+  .att-state{font-size:10px;padding:3px 9px;border-radius:10px;font-weight:700}
+  .att-yes{background:var(--green-bg);color:var(--green-tx)}
+  .att-no{background:var(--red-bg);color:var(--red-tx)}
+  .att-pending{background:var(--amber-bg);color:var(--amber-tx)}
+  .req-form-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .req-form-label span{font-size:13.5px;font-weight:700}
+  .col-id{width:55px} .col-entity{width:170px} .col-date{width:90px}
+  .col-disp{width:110px} .col-days{width:75px} .col-memo{width:100px} .col-act{width:50px}
+  .req-col-headers{display:grid;grid-template-columns:1.3fr 1.1fr 1fr 0.9fr auto;gap:7px;font-size:10px;color:var(--text-faint);padding:0 10px;margin-bottom:5px;font-weight:600}
+  .empty-req{font-size:12px;color:var(--text-faint);margin-bottom:9px}
+  .stats-tabs{display:flex;gap:6px;margin-bottom:18px;border-bottom:1px solid var(--border-soft);padding-bottom:0}
+  .stats-tab{padding:9px 15px;font-size:13px;font-weight:600;color:var(--text-soft);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+  .stats-tab.active{color:var(--blue-tx);border-color:var(--blue)}
+  .entity-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px}
+  .entity-bar-row .ename{width:190px;flex:0 0 190px;color:var(--text);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .entity-bar-track{flex:1;height:10px;background:#eef0f3;border-radius:6px;overflow:hidden}
+  .entity-bar-fill{height:100%;background:linear-gradient(90deg,var(--blue),#3f8fd1);border-radius:6px}
+  .entity-bar-count{width:34px;flex:0 0 34px;text-align:left;font-weight:700;font-size:12.5px;color:var(--text-soft)}
+  .month-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:8px}
+  .month-card{background:#f9fafb;border:1px solid var(--border-soft);border-radius:10px;padding:12px 14px}
+  .month-card .mname{font-size:12px;color:var(--text-soft);font-weight:600;margin-bottom:6px}
+  .month-card .mrow{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
+  .month-card .mrow b{font-weight:700}
+  @media print{
+    body *{visibility:hidden}
+    #print-area, #print-area *{visibility:visible}
+    #print-area{position:absolute;top:0;right:0;left:0;width:100%}
+    .no-print{display:none!important}
+    #print-header{display:block!important}
   }
-
-  * { box-sizing:border-box }
-  body { margin:0; font-family:system-ui,Segoe UI,Roboto,Arial; color:var(--text); background:var(--bg); transition:0.3s }
-  header { padding:16px; border-bottom:1px solid var(--border); position:sticky; top:0; background:var(--header-bg); backdrop-filter:blur(8px); z-index:10 }
-  h1 { margin:0; font-size:18px }
-  .wrap { max-width:1100px; margin:16px auto; padding:0 12px }
-  .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:12px }
-  .card { grid-column:span 12; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:14px }
-  @media(min-width:900px){ .half{grid-column:span 6} }
-  label { display:block; font-size:12px; color:var(--muted); margin:8px 0 6px }
-  input, select, textarea { width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--border); background:var(--input-bg); color:var(--text); outline:none }
-  input:focus, textarea:focus { border-color:#3b82f6 }
-  .row { display:flex; gap:8px; align-items:center; flex-wrap:wrap }
-  .btn { padding:9px 12px; border-radius:10px; border:1px solid var(--border); background:var(--btn-bg); color:var(--btn-text); cursor:pointer; font-size:13px }
-  .btn.accent { background:var(--accent-bg); border-color:var(--accent-border); color:var(--accent-text) }
-  .btn.warn { background:var(--warn-bg); border-color:var(--warn-border); color:var(--warn-text) }
-  .btn.danger { background:var(--danger-bg); border-color:var(--danger-border); color:var(--danger-text) }
-  .muted { color:var(--muted) } 
-  .sub { font-size:12px; color:var(--muted) }
-  .ok { color:var(--accent) } 
-  .bad { color:var(--danger) }
-  .pill { display:inline-flex; gap:6px; align-items:center; padding:6px 10px; border-radius:20px; border:1px solid var(--border); background:var(--input-bg); font-size:12px; cursor:pointer }
-  .pill.active { background:var(--accent-bg); border-color:var(--accent-border) }
-  .bar { height:8px; background:var(--input-bg); border:1px solid var(--border); border-radius:999px; overflow:hidden; margin:6px 0 }
-  .bar>span { display:block; height:100%; background:linear-gradient(90deg,#60a5fa,#4ade80); transition:0.4s }
-  .table { width:100%; border-collapse:collapse; font-size:13px }
-  .table th, .table td { border-bottom:1px solid var(--border); padding:8px 6px; text-align:center }
-  dialog { border:none; border-radius:14px; background:var(--card); color:var(--text); max-width:900px; width:92%; padding:20px }
-  dialog::backdrop { background:#0008 }
-  #chartCard canvas { width:100% !important; height:80px !important; }
-  .mood.active { background:var(--accent-bg) !important; border-color:var(--accent-border) !important; color:var(--accent-text) !important; }
+  @media (max-width:700px){
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .req-row{grid-template-columns:1fr}
+    .req-col-headers{display:none}
+    .entity-bar-row .ename{width:110px;flex:0 0 110px;font-size:12px}
+  }
+  @media (min-width:701px) and (max-width:980px){
+    .stats-grid{grid-template-columns:repeat(3,1fr)}
+  }
 </style>
 </head>
 <body>
-<header>
-  <div class="row" style="justify-content:space-between">
-    <h1>تعافي 84 — خطة 12 أسبوع</h1>
-    <div class="row">
-      <button class="btn" id="openInv">المخزون</button>
-      <button class="btn" id="openRem">تذكيرات</button>
-      <button class="btn" id="prevDay">السابق</button>
-      <button class="btn" id="nextDay">التالي</button>
-      <button class="btn" id="darkMode">الوضع الليلي</button>
-      <button class="btn warn" id="resetStart">يوم البدء</button>
-      <button class="btn" id="exportCsv">CSV</button>
-      <button class="btn" id="exportPdf">PDF</button>
-      <button class="btn danger" id="wipe">مسح</button>
-    </div>
-  </div>
-  <div class="row" style="margin-top:8px;gap:12px;flex-wrap:wrap">
-    <span class="pill">بدء: <b id="startDateLabel">١‏/٥‏/٢٠٢٦</b></span>
-    <span class="pill">اليوم: <b id="dayIdxLabel">1 (عرض)</b> / 84</span>
-    <span class="pill">أسبوع: <b id="weekLabel">1</b> — <span id="weekPhase">بدء قوي</span></span>
-    <span class="pill ok">تقدم: <span id="progressText">0%</span></span>
-  </div>
-</header>
-
 <div class="wrap">
-  <div class="grid">
-    <div class="card" id="chartCard">
-      <h3 style="margin:0 0 6px">منحنى التخفيض</h3>
-      <canvas id="chart" style="box-sizing: border-box; display: block; height: 111px; width: 1046px;" width="1046" height="111"></canvas>
-    </div>
 
-    <div class="card">
-      <h3 style="margin:0 0 6px">الجرعات المستهدفة اليوم</h3>
-      <p class="sub" id="targetsText">Prafamax: <b>400</b>mg — Armodacure: <b>300</b>mg — NightCalm: <b>12</b>mg — Gabapentin: <b>2400</b>mg — كافيين ≤ <b>300</b>mg.</p>
-      <div class="bar"><span id="progressBar" style="width:0%"></span></div>
+  <div class="top-bar">
+    <div>
+      <h1>📋 النيابة الإدارية — قيد القضايا 2026</h1>
+      <div class="subtitle" id="case-count-sub">إجمالي 26 قضية — 2 قيد التحقيق — 0 عرض — نسبة الإنجاز 88%</div>
     </div>
+    <div class="top-actions">
+      <button class="btn" onclick="openStats()">📊 الإحصائيات التفصيلية</button>
+      <button class="btn" onclick="exportJson()">⬇ نسخة احتياطية</button>
+      <button class="btn primary" onclick="openAdd()">＋ قضية جديدة</button>
+    </div>
+  </div>
 
-    <div class="card">
-      <h3 style="margin:0 0 8px">تسجيل اليوم</h3>
-      <table class="table" id="drugTable">
-        <thead><tr><th>دواء</th><th>هدف</th><th>أُخذ</th><th>تحذير</th><th>متبقي</th><th>أيام</th></tr></thead>
-        <tbody><tr><td style="text-align:right">Prafamax (Modafinil)</td><td>400</td><td><input type="text" inputmode="numeric" style="width:100px" value="" data-key="Prafamax" class="doseInput"></td><td class="sub" id="warn_Prafamax"></td><td id="left_Prafamax">0</td><td id="days_Prafamax"><span class="bad">تنبيه 0 أيام</span></td></tr><tr><td style="text-align:right">Armodacure (Armodafinil)</td><td>300</td><td><input type="text" inputmode="numeric" style="width:100px" value="" data-key="Armodacure" class="doseInput"></td><td class="sub" id="warn_Armodacure"></td><td id="left_Armodacure">0</td><td id="days_Armodacure"><span class="bad">تنبيه 0 أيام</span></td></tr><tr><td style="text-align:right">Night Calm (Zopiclone)</td><td>12</td><td><input type="text" inputmode="numeric" style="width:100px" value="" data-key="NightCalm" class="doseInput"></td><td class="sub" id="warn_NightCalm"></td><td id="left_NightCalm">0</td><td id="days_NightCalm"><span class="bad">تنبيه 0 أيام</span></td></tr><tr><td style="text-align:right">Gabapentin</td><td>2400</td><td><input type="text" inputmode="numeric" style="width:100px" value="" data-key="Gabapentin" class="doseInput"></td><td class="sub" id="warn_Gabapentin"></td><td id="left_Gabapentin">0</td><td id="days_Gabapentin"><span class="bad">تنبيه 0 أيام</span></td></tr><tr><td style="text-align:right">Caffeine (حد أقصى)</td><td>300</td><td><input type="text" inputmode="numeric" style="width:100px" value="" data-key="Caffeine" class="doseInput"></td><td class="sub" id="warn_Caffeine"></td><td id="left_Caffeine">-</td><td id="days_Caffeine">- أيام</td></tr></tbody>
+  <div class="stats-grid">
+    <div class="stat"><div class="val" id="s-total">26</div><div class="lbl">إجمالي القضايا</div></div>
+    <div class="stat"><div class="val" id="s-pending">2</div><div class="lbl">قيد التحقيق</div></div>
+    <div class="stat"><div class="val" id="s-ard">0</div><div class="lbl">عرض (جاري كتابة المذكرة)</div></div>
+    <div class="stat"><div class="val" id="s-done">23</div><div class="lbl">تم التصرف</div></div>
+    <div class="stat highlight"><div class="val" id="s-rate">88%</div><div class="lbl">نسبة الإنجاز</div></div>
+    <div class="stat"><div class="val" id="s-days">54</div><div class="lbl">متوسط مدة التحقيق (يوم)</div></div>
+  </div>
+
+  <div class="toolbar">
+    <input type="text" id="search" placeholder="بحث في رقم القضية أو الموضوع..." oninput="render()">
+    <select id="flt-entity" onchange="render()"><option value="">كل الجهات</option><option value="الضرائب العقارية">الضرائب العقارية</option><option value="داخلي">داخلي</option><option value="وزارة التربية والتعليم والتعليم الفني">وزارة التربية والتعليم والتعليم الفني</option><option value="وزارة التنمية المحلية">وزارة التنمية المحلية</option><option value="وزارة الزراعة واستصلاح الأراضي">وزارة الزراعة واستصلاح الأراضي</option><option value="وزارة الصحة والسكان">وزارة الصحة والسكان</option><option value="وزارة المالية">وزارة المالية</option><option value="وزارة الموارد المائية والري">وزارة الموارد المائية والري</option></select>
+    <select id="flt-disp" onchange="render()">
+      <option value="">كل التصرفات</option>
+      <option value="تحقيق">قيد التحقيق</option>
+      <option value="عرض">عرض</option>
+      <option value="حفظ إداري">حفظ إداري</option>
+      <option value="حفظ لعدم الأهمية">حفظ لعدم الأهمية</option>
+      <option value="اختصاص">اختصاص</option>
+    </select>
+    <select id="sort" onchange="render()">
+      <option value="id-asc">رقم ↑</option>
+      <option value="id-desc">رقم ↓</option>
+      <option value="date-desc">تاريخ الإحالة ↓</option>
+      <option value="date-asc">تاريخ الإحالة ↑</option>
+      <option value="days-desc">مدة التحقيق ↓</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <colgroup>
+          <col class="col-id"><col><col class="col-entity">
+          <col class="col-date"><col class="col-disp"><col class="col-days"><col class="col-memo"><col class="col-act">
+        </colgroup>
+        <thead>
+        <tr>
+          <th>رقم</th><th>الموضوع</th><th>الجهة</th>
+          <th>الإحالة</th><th>التصرف</th><th>المدة</th><th>المذكرة</th><th></th>
+        </tr>
+        </thead>
+        <tbody id="tbl-body"><tr>
+        <td style="font-weight:600">19</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="19 ما أبلغت به رئاسة المجلس بخصوص تعدي امين ثابت وحدة كفر شاهين">19 ما أبلغت به رئاسة المجلس بخصوص تعدي امين ثابت وحدة كفر شاهين</td>
+        <td><span class="entity-tag">وزارة التنمية المحلية</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">97 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(19)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">20</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="20 شكوى ممرضة هدي تضرر من تذاكر مستشفى زفتى">20 شكوى ممرضة هدي تضرر من تذاكر مستشفى زفتى</td>
+        <td><span class="entity-tag">وزارة الصحة والسكان</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-hafz2">حفظ لعدم الأهمية</span></td>
+        <td><span class="day-badge">108 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(20)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">21</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="21 شكوى محمد صوابي عتريس">21 شكوى محمد صوابي عتريس</td>
+        <td><span class="entity-tag">وزارة التنمية المحلية</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">108 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(21)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">22</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="22 متغير المكاني رقم 607580 بناحية الشبرا ملس">22 متغير المكاني رقم 607580 بناحية الشبرا ملس</td>
+        <td><span class="entity-tag">وزارة التنمية المحلية</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-tahqiq">تحقيق</span></td>
+        <td><span class="day-badge">53 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(22)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">23</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="23 بلاغ ضد مسعد فتحي لزرع أعمدة سنبو الكبرى">23 بلاغ ضد مسعد فتحي لزرع أعمدة سنبو الكبرى</td>
+        <td><span class="entity-tag">وزارة التنمية المحلية</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">171 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(23)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">24</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="24 شكوى احمد ابو الفتوح معلم ضد المدرسة عبير">24 شكوى احمد ابو الفتوح معلم ضد المدرسة عبير</td>
+        <td><span class="entity-tag">وزارة التربية والتعليم والتعليم الفني</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">53 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(24)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">25</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="25 اعمال صيرافية شبراملس عوائد عن عام 2024،">25 اعمال صيرافية شبراملس عوائد عن عام 2024،</td>
+        <td><span class="entity-tag">الضرائب العقارية</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">86 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(25)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">26</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="26 افراد 302 رصف الطرق">26 افراد 302 رصف الطرق</td>
+        <td><span class="entity-tag">وزارة التنمية المحلية</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">53 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(26)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">27</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="افراد 771 لسنة 2025 الزراعة انقطاع العامل سعد عن العمل دون انهاء خدمته">افراد 771 لسنة 2025 الزراعة انقطاع العامل سعد عن العمل دون انهاء خدمته</td>
+        <td><span class="entity-tag">وزارة الزراعة واستصلاح الأراضي</span></td>
+        <td>01/01/2026</td>
+        <td><span class="badge b-tahqiq">تحقيق</span></td>
+        <td><span class="day-badge">171 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(27)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">138</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="افراد شكوى خديجة ضد مدير مدرسة 748">افراد شكوى خديجة ضد مدير مدرسة 748</td>
+        <td><span class="entity-tag">وزارة التربية والتعليم والتعليم الفني</span></td>
+        <td>01/02/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">22 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(138)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">141</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="141 شكوى فقد ملف التصالح الخاص بالمواطن عزت الخولي">141 شكوى فقد ملف التصالح الخاص بالمواطن عزت الخولي</td>
+        <td><span class="entity-tag">داخلي</span></td>
+        <td>01/02/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">58 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(141)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">142</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="142 افراد تامر عبدالحميد">142 افراد تامر عبدالحميد</td>
+        <td><span class="entity-tag">وزارة الموارد المائية والري</span></td>
+        <td>01/02/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">85 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(142)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">151</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="151 ش عبد العظيم عمر عبد العظيم فتوح الوحدة المحلية بقرية سنبو الكبرى، المواطن عبد النبي سالم خميس">151 ش عبد العظيم عمر عبد العظيم فتوح الوحدة المحلية بقرية سنبو الكبرى، المواطن عبد النبي سالم خميس</td>
+        <td><span class="entity-tag">وزارة التنمية المحلية</span></td>
+        <td>01/02/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">77 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(151)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">152</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="152 شكوى حسن طه حسن لعدم الحاق نجلته بالمدرسة القريبة">152 شكوى حسن طه حسن لعدم الحاق نجلته بالمدرسة القريبة</td>
+        <td><span class="entity-tag">وزارة التربية والتعليم والتعليم الفني</span></td>
+        <td>01/02/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">61 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(152)">✎</button></td>
+      </tr><tr>
+        <td style="font-weight:600">153</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="153 شكوى سعد طه سعد ضد موجه المكتبات">153 شكوى سعد طه سعد ضد موجه المكتبات</td>
+        <td><span class="entity-tag">وزارة التربية والتعليم والتعليم الفني</span></td>
+        <td>01/02/2026</td>
+        <td><span class="badge b-hafz">حفظ إداري</span></td>
+        <td><span class="day-badge">28 يوم</span></td>
+        <td><span class="icon-link muted">— لا يوجد</span></td>
+        <td><button class="btn sm" onclick="openEdit(153)">✎</button></td>
+      </tr></tbody>
       </table>
-      <div class="row" style="margin-top:10px">
-        <button class="btn accent" id="saveDay">حفظ</button>
-        <button class="btn" id="voiceNote">ملاحظة صوتية</button>
-        <span id="saveMsg" class="muted"></span>
+    </div>
+    <div class="pages" id="pages">
+    <button class="btn sm" onclick="goPage(0)" disabled="">›</button>
+    <span>صفحة 1 من 2 &nbsp;(26 نتيجة)</span>
+    <button class="btn sm" onclick="goPage(2)">‹</button>
+  </div>
+  </div>
+
+  <div class="section-title">📅 الجلسات القادمة</div>
+  <div id="agenda-cont"><div class="no-data" style="background:var(--card);border:1px solid var(--border-soft);border-radius:12px">لا توجد جلسات قادمة مجدولة لقضايا قيد التحقيق</div></div>
+
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal-overlay">
+  <div class="modal">
+    <h3 id="modal-title">إضافة قضية</h3>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div class="form-row">
+        <label>رقم القضية *</label>
+        <input type="number" id="f-id" placeholder="مثال: 301">
+      </div>
+      <div class="form-row">
+        <label>الجهة الإدارية</label>
+        <input type="text" id="f-entity" list="entity-list" placeholder="اختر أو اكتب جهة">
+        <datalist id="entity-list">
+          <option value="وزارة التنمية المحلية">
+          </option><option value="وزارة التربية والتعليم والتعليم الفني">
+          </option><option value="وزارة التعليم العالي والبحث العلمي">
+          </option><option value="وزارة الصحة والسكان">
+          </option><option value="وزارة التضامن الاجتماعي">
+          </option><option value="وزارة الإسكان والمرافق والمجتمعات العمرانية">
+          </option><option value="وزارة العمل">
+          </option><option value="وزارة الأوقاف">
+          </option><option value="وزارة الثقافة">
+          </option><option value="وزارة الشباب والرياضة">
+          </option><option value="وزارة البيئة">
+          </option><option value="وزارة التموين والتجارة الداخلية">
+          </option><option value="وزارة المالية">
+          </option><option value="وزارة الزراعة واستصلاح الأراضي">
+          </option><option value="وزارة الموارد المائية والري">
+          </option><option value="وزارة الكهرباء والطاقة المتجددة">
+          </option><option value="وزارة الاتصالات وتكنولوجيا المعلومات">
+          </option><option value="الأزهر">
+          </option><option value="جامعة الأزهر">
+          </option><option value="الضرائب العقارية">
+          </option><option value="داخلي">
+        </option></datalist>
       </div>
     </div>
 
-    <div class="card half">
-      <h3>المكملات</h3>
-      <div class="row">
-        <label class="pill"><input type="checkbox" id="supAM"> صباحًا</label>
-        <label class="pill"><input type="checkbox" id="supNoon"> ظهرًا</label>
-        <label class="pill"><input type="checkbox" id="supPM"> مساءً</label>
-        <label class="pill"><input type="checkbox" id="supBed"> قبل النوم</label>
-      </div>
-      <label style="margin-top:10px">ملاحظات</label>
-      <textarea id="notes" rows="4" placeholder="اكتب أو اضغط الميكروفون..."></textarea>
+    <div class="form-row">
+      <label>موضوع القضية</label>
+      <textarea id="f-subject" rows="2"></textarea>
     </div>
 
-    <div class="card half">
-      <h3>مؤشرات اليوم</h3>
-      <div class="row" style="gap:8px">
-        <div style="min-width:140px"><label>الطاقة (1–10)</label><input type="number" id="kpiEnergy" min="1" max="10"></div>
-        <div style="min-width:140px"><label>النوم (ساعات)</label><input type="number" id="kpiSleep" min="0" max="12" step="0.5"></div>
-        <div style="min-width:140px"><label>القلق</label><input type="number" id="kpiAnxiety" min="0" max="20"></div>
-        <div style="min-width:140px"><label>الهضم (1–10)</label><input type="number" id="kpiGut" min="1" max="10"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div class="form-row">
+        <label>تاريخ الإحالة</label>
+        <input type="date" id="f-ref-date">
       </div>
-      <div class="row" style="margin-top:12px; gap:6px; justify-content:center">
-        <span class="pill mood" id="mood_1" onclick="setMood(1)">مكتئب</span>
-        <span class="pill mood" id="mood_2" onclick="setMood(2)">متوتر</span>
-        <span class="pill mood active" id="mood_3" onclick="setMood(3)">عادي</span>
-        <span class="pill mood" id="mood_4" onclick="setMood(4)">جيد</span>
-        <span class="pill mood" id="mood_5" onclick="setMood(5)">ممتاز</span>
+      <div class="form-row">
+        <label>التصرف</label>
+        <select id="f-disp">
+          <option value="تحقيق">تحقيق</option>
+          <option value="عرض">عرض (انتهى التحقيق - جاري كتابة المذكرة)</option>
+          <option value="حفظ إداري">حفظ إداري</option>
+          <option value="حفظ لعدم الأهمية">حفظ لعدم الأهمية</option>
+          <option value="اختصاص">اختصاص</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>تاريخ التصرف</label>
+        <input type="date" id="f-disp-date">
+      </div>
+      <div class="form-row">
+        <label>ميعاد الجلسة القادمة</label>
+        <input type="date" id="f-session-date">
       </div>
     </div>
 
-    <div class="card">
-      <h3>المخزون (ملخص)</h3>
-      <table class="table" id="invTable">
-        <thead><tr><th>دواء</th><th>mg/قرص</th><th>أقراص/علبة</th><th>علب</th><th>متبقي</th><th>أيام متبقية</th><th>تنبيه</th></tr></thead>
-        <tbody><tr><td style="text-align:right">Prafamax (Modafinil)</td><td>200</td><td>10</td><td>0</td><td>0</td><td><span class="bad">تنبيه 0</span></td><td class="bad">نفاد قريب</td></tr><tr><td style="text-align:right">Armodacure (Armodafinil)</td><td>150</td><td>30</td><td>0</td><td>0</td><td><span class="bad">تنبيه 0</span></td><td class="bad">نفاد قريب</td></tr><tr><td style="text-align:right">Night Calm (Zopiclone)</td><td>3</td><td>20</td><td>0</td><td>0</td><td><span class="bad">تنبيه 0</span></td><td class="bad">نفاد قريب</td></tr><tr><td style="text-align:right">Gabapentin</td><td>800</td><td>30</td><td>0</td><td>0</td><td><span class="bad">تنبيه 0</span></td><td class="bad">نفاد قريب</td></tr></tbody>
-      </table>
+    <div class="form-row">
+      <label>رابط مذكرة التصرف (ملف وورد)</label>
+      <input type="url" id="f-memo-doc" placeholder="رابط Google Drive أو غيره">
+    </div>
+    <div class="form-row">
+      <label>رابط آخر متعلق بالمذكرة (اختياري)</label>
+      <input type="url" id="f-memo" placeholder="https://...">
+    </div>
+
+    <div style="border-top:1px solid var(--border-soft);margin-top:6px;padding-top:14px">
+      <div class="req-form-label">
+        <span>👤 المطلوبون</span>
+        <button class="btn sm" onclick="addRequiree()" type="button">＋ إضافة مطلوب</button>
+      </div>
+      <div class="req-col-headers">
+        <span>الاسم</span><span>الصفة / الوظيفة</span><span>الهاتف</span><span>الحضور</span><span></span>
+      </div>
+      <div id="req-form-list"></div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn primary" onclick="saveCase()">✓ حفظ</button>
+      <button class="btn" onclick="closeModal()">إلغاء</button>
+      <button class="btn danger" id="del-btn" onclick="deleteCase()" style="margin-right:auto">🗑 حذف</button>
     </div>
   </div>
 </div>
 
-<dialog id="invDlg"><form method="dialog">
-  <h3>إعدادات المخزون</h3>
-  <div id="invForm"></div>
-  <div class="row" style="margin-top:10px;justify-content:flex-end">
-    <button class="btn" value="cancel">إلغاء</button>
-    <button class="btn accent" id="saveInv" value="ok">حفظ</button>
-  </div>
-</form></dialog>
+<!-- Stats Modal -->
+<div id="stats-modal" class="modal-overlay">
+  <div class="modal wide">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px" class="no-print">
+      <h3 style="margin:0">📊 الإحصائيات التفصيلية</h3>
+      <div style="display:flex;gap:8px">
+        <button class="btn sm" onclick="window.print()">🖨 طباعة</button>
+        <button class="btn sm" onclick="closeStats()">✕ إغلاق</button>
+      </div>
+    </div>
 
-<dialog id="remDlg"><form method="dialog">
-  <h3>تذكيرات صوتية</h3>
-  <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:8px">
-    <div><label>صباحًا</label><input id="remAM" placeholder="08:30"></div>
-    <div><label>ظهرًا</label><input id="remNoon" placeholder="13:30"></div>
-    <div><label>مساءً</label><input id="remPM" placeholder="18:00"></div>
-    <div><label>قبل النوم</label><input id="remBed" placeholder="22:30"></div>
-    <div style="grid-column:span 2"><label><input type="checkbox" id="remEnable"> تفعيل التنبيهات</label></div>
-  </div>
-  <div class="row" style="margin-top:10px;justify-content:flex-end">
-    <button class="btn" value="cancel">إلغاء</button>
-    <button class="btn accent" id="saveRem" value="ok">حفظ</button>
-  </div>
-</form></dialog>
+    <div id="print-area">
+      <div style="display:none;margin-bottom:14px" id="print-header">
+        <h2 style="font-size:18px;font-weight:800;margin-bottom:4px">النيابة الإدارية — تقرير إحصائي</h2>
+        <div style="font-size:12px;color:var(--text-soft)" id="print-date">تاريخ التقرير: ٢١‏/٦‏/٢٠٢٦</div>
+      </div>
 
-<script src="./index_files/chart.js.تنزيل"></script>
-<script src="./index_files/jspdf.umd.min.js.تنزيل"></script>
+      <div class="section-title" style="margin-top:0">توزيع القضايا حسب الجهة الإدارية</div>
+      <div id="entity-stats-cont" style="margin-bottom:8px">
+    <div class="entity-bar-row">
+      <span class="ename" title="وزارة التنمية المحلية">وزارة التنمية المحلية</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:100%"></div></div>
+      <span class="entity-bar-count">9</span>
+    </div>
+    <div class="entity-bar-row">
+      <span class="ename" title="وزارة الصحة والسكان">وزارة الصحة والسكان</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:56%"></div></div>
+      <span class="entity-bar-count">5</span>
+    </div>
+    <div class="entity-bar-row">
+      <span class="ename" title="وزارة التربية والتعليم والتعليم الفني">وزارة التربية والتعليم والتعليم الفني</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:44%"></div></div>
+      <span class="entity-bar-count">4</span>
+    </div>
+    <div class="entity-bar-row">
+      <span class="ename" title="وزارة الزراعة واستصلاح الأراضي">وزارة الزراعة واستصلاح الأراضي</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:33%"></div></div>
+      <span class="entity-bar-count">3</span>
+    </div>
+    <div class="entity-bar-row">
+      <span class="ename" title="وزارة المالية">وزارة المالية</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:22%"></div></div>
+      <span class="entity-bar-count">2</span>
+    </div>
+    <div class="entity-bar-row">
+      <span class="ename" title="الضرائب العقارية">الضرائب العقارية</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:11%"></div></div>
+      <span class="entity-bar-count">1</span>
+    </div>
+    <div class="entity-bar-row">
+      <span class="ename" title="داخلي">داخلي</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:11%"></div></div>
+      <span class="entity-bar-count">1</span>
+    </div>
+    <div class="entity-bar-row">
+      <span class="ename" title="وزارة الموارد المائية والري">وزارة الموارد المائية والري</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:11%"></div></div>
+      <span class="entity-bar-count">1</span>
+    </div></div>
+
+      <div class="section-title">الإحصائيات الشهرية (حسب تاريخ الإحالة)</div>
+      <div class="month-grid" id="month-stats-cont"><div class="month-card">
+      <div class="mname">يناير 2026</div>
+      <div class="mrow"><span>محال</span><b>9</b></div>
+      <div class="mrow"><span>منجز</span><b>7</b></div>
+    </div><div class="month-card">
+      <div class="mname">فبراير 2026</div>
+      <div class="mrow"><span>محال</span><b>6</b></div>
+      <div class="mrow"><span>منجز</span><b>6</b></div>
+    </div><div class="month-card">
+      <div class="mname">مارس 2026</div>
+      <div class="mrow"><span>محال</span><b>3</b></div>
+      <div class="mrow"><span>منجز</span><b>2</b></div>
+    </div><div class="month-card">
+      <div class="mname">أبريل 2026</div>
+      <div class="mrow"><span>محال</span><b>5</b></div>
+      <div class="mrow"><span>منجز</span><b>5</b></div>
+    </div><div class="month-card">
+      <div class="mname">مايو 2026</div>
+      <div class="mrow"><span>محال</span><b>3</b></div>
+      <div class="mrow"><span>منجز</span><b>3</b></div>
+    </div></div>
+
+      <div class="section-title">جدول تفصيلي كامل</div>
+      <div class="card" style="box-shadow:none">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>رقم</th><th>الموضوع</th><th>الجهة</th><th>الإحالة</th><th>التصرف</th><th>تاريخ التصرف</th><th>المدة (يوم)</th></tr>
+            </thead>
+            <tbody id="print-table-body"><tr>
+      <td>19</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">19 ما أبلغت به رئاسة المجلس بخصوص تعدي امين ثابت وحدة كفر شاهين</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>08/04/2026</td>
+      <td>97</td>
+    </tr><tr>
+      <td>20</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">20 شكوى ممرضة هدي تضرر من تذاكر مستشفى زفتى</td>
+      <td>وزارة الصحة والسكان</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-hafz2">حفظ لعدم الأهمية</span></td>
+      <td>19/04/2026</td>
+      <td>108</td>
+    </tr><tr>
+      <td>21</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">21 شكوى محمد صوابي عتريس</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>19/04/2026</td>
+      <td>108</td>
+    </tr><tr>
+      <td>22</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">22 متغير المكاني رقم 607580 بناحية الشبرا ملس</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-tahqiq">تحقيق</span></td>
+      <td>23/02/2026</td>
+      <td>53</td>
+    </tr><tr>
+      <td>23</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">23 بلاغ ضد مسعد فتحي لزرع أعمدة سنبو الكبرى</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>—</td>
+      <td>171</td>
+    </tr><tr>
+      <td>24</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">24 شكوى احمد ابو الفتوح معلم ضد المدرسة عبير</td>
+      <td>وزارة التربية والتعليم والتعليم الفني</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>23/02/2026</td>
+      <td>53</td>
+    </tr><tr>
+      <td>25</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">25 اعمال صيرافية شبراملس عوائد عن عام 2024،</td>
+      <td>الضرائب العقارية</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>28/03/2026</td>
+      <td>86</td>
+    </tr><tr>
+      <td>26</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">26 افراد 302 رصف الطرق</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>23/02/2026</td>
+      <td>53</td>
+    </tr><tr>
+      <td>27</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">افراد 771 لسنة 2025 الزراعة انقطاع العامل سعد عن العمل دون انهاء خدمته</td>
+      <td>وزارة الزراعة واستصلاح الأراضي</td>
+      <td>01/01/2026</td>
+      <td><span class="badge b-tahqiq">تحقيق</span></td>
+      <td>—</td>
+      <td>171</td>
+    </tr><tr>
+      <td>138</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">افراد شكوى خديجة ضد مدير مدرسة 748</td>
+      <td>وزارة التربية والتعليم والتعليم الفني</td>
+      <td>01/02/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>23/02/2026</td>
+      <td>22</td>
+    </tr><tr>
+      <td>141</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">141 شكوى فقد ملف التصالح الخاص بالمواطن عزت الخولي</td>
+      <td>داخلي</td>
+      <td>01/02/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>31/03/2026</td>
+      <td>58</td>
+    </tr><tr>
+      <td>142</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">142 افراد تامر عبدالحميد</td>
+      <td>وزارة الموارد المائية والري</td>
+      <td>01/02/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>27/04/2026</td>
+      <td>85</td>
+    </tr><tr>
+      <td>151</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">151 ش عبد العظيم عمر عبد العظيم فتوح الوحدة المحلية بقرية سنبو الكبرى، المواطن عبد النبي سالم خميس</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>01/02/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>19/04/2026</td>
+      <td>77</td>
+    </tr><tr>
+      <td>152</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">152 شكوى حسن طه حسن لعدم الحاق نجلته بالمدرسة القريبة</td>
+      <td>وزارة التربية والتعليم والتعليم الفني</td>
+      <td>01/02/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>03/04/2026</td>
+      <td>61</td>
+    </tr><tr>
+      <td>153</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">153 شكوى سعد طه سعد ضد موجه المكتبات</td>
+      <td>وزارة التربية والتعليم والتعليم الفني</td>
+      <td>01/02/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>01/03/2026</td>
+      <td>28</td>
+    </tr><tr>
+      <td>225</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">225 بلاغ مديرية الصحة بشأن ملاحظة الجهاز المركزي علي منظومة النظافة بمستشفى زفتى العام</td>
+      <td>وزارة الصحة والسكان</td>
+      <td>01/04/2026</td>
+      <td><span class="badge b-hafz2">حفظ لعدم الأهمية</span></td>
+      <td>18/05/2026</td>
+      <td>47</td>
+    </tr><tr>
+      <td>226</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">226 افراد انقطاع احمد فريد توفيق الهلباوي</td>
+      <td>وزارة الصحة والسكان</td>
+      <td>01/03/2026</td>
+      <td><span class="badge b-tahqiq">تحقيق</span></td>
+      <td>—</td>
+      <td>112</td>
+    </tr><tr>
+      <td>227</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">شكوى أسماء حسن الجوهري ضد المختصين بالتأمينات</td>
+      <td>وزارة المالية</td>
+      <td>01/03/2026</td>
+      <td><span class="badge b-hafz2">حفظ لعدم الأهمية</span></td>
+      <td>18/05/2026</td>
+      <td>78</td>
+    </tr><tr>
+      <td>241</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">241 قسائم التحصيل الممزقة والتأخر في التحصيل مستشفى زفتى</td>
+      <td>وزارة الصحة والسكان</td>
+      <td>01/04/2026</td>
+      <td><span class="badge b-hafz2">حفظ لعدم الأهمية</span></td>
+      <td>18/05/2026</td>
+      <td>47</td>
+    </tr><tr>
+      <td>269</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">269 بلاغ المتغيرات المكانية رقم 202177 بندر زفتى</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>01/03/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>27/04/2026</td>
+      <td>57</td>
+    </tr><tr>
+      <td>287</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">بلاغ الصحة بشأن مستحقات النفايات</td>
+      <td>وزارة الصحة والسكان</td>
+      <td>01/04/2026</td>
+      <td><span class="badge b-hafz2">حفظ لعدم الأهمية</span></td>
+      <td>27/04/2026</td>
+      <td>26</td>
+    </tr><tr>
+      <td>288</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">بلاغ الطب البيطري التعدي علي مديرة المدرسة</td>
+      <td>وزارة الزراعة واستصلاح الأراضي</td>
+      <td>01/04/2026</td>
+      <td><span class="badge b-ikhtisas">اختصاص</span></td>
+      <td>27/04/2026</td>
+      <td>26</td>
+    </tr><tr>
+      <td>289</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">شكوى أحمد السعيد محمد سويلم ضد المختصين بوحدة سنباط</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>01/04/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>27/04/2026</td>
+      <td>26</td>
+    </tr><tr>
+      <td>341</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">بلاغ ضرائب</td>
+      <td>وزارة المالية</td>
+      <td>03/05/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>18/05/2026</td>
+      <td>15</td>
+    </tr><tr>
+      <td>400</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">متغيرات</td>
+      <td>وزارة التنمية المحلية</td>
+      <td>05/05/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>18/05/2026</td>
+      <td>13</td>
+    </tr><tr>
+      <td>440</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">بلاغ زراعة</td>
+      <td>وزارة الزراعة واستصلاح الأراضي</td>
+      <td>03/05/2026</td>
+      <td><span class="badge b-hafz">حفظ إداري</span></td>
+      <td>01/06/2026</td>
+      <td>29</td>
+    </tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-/* ===== التخزين ===== */
-const LS_DATA="recovery84_data", LS_START="recovery84_start", LS_INV="recovery84_inv", LS_REM="recovery84_rem", LS_DARK="recovery84_dark";
-/* ===== تحويل الأرقام ===== */
-function toAsciiDigits(str){ if(typeof str!=="string")return str; const ar="٠١٢٣٤٥٦٧٨٩",fa="۰۱۲۳۴۵۶۷۸۹";let o="";for(const c of str){const i=ar.indexOf(c);if(i>-1){o+=i;continue;}const j=fa.indexOf(c);if(j>-1){o+=j;continue;}o+=c;}return o;}
-function parseNum(v){if(!v)return"";const n=Number(toAsciiDigits(String(v)).replace(/[^\d.]/g,""));return Number.isFinite(n)?n:"";}
-/* ===== التواريخ ===== */
-function getStartDate(){let s=localStorage.getItem(LS_START);if(!s){const d=new Date();d.setHours(0,0,0,0);localStorage.setItem(LS_START,d.toISOString());s=d.toISOString();}return new Date(s);}
-function setStartDate(d){d.setHours(0,0,0,0);localStorage.setItem(LS_START,d.toISOString());renderAll();}
-function getDayIndex(){const st=getStartDate().getTime(),now=new Date();now.setHours(0,0,0,0);return Math.min(84,Math.max(1,Math.floor((now-st)/86400000)+1));}
-const weekOf = d => Math.ceil(d/7);
-/* ===== الجرعات ===== */
-function fillRange(a,s,e,v){for(let i=s;i<=e;i++)a[i]=v;}
-const targets={Prafamax:new Array(85).fill(0),Armodacure:new Array(85).fill(0),NightCalm:new Array(85).fill(0),Gabapentin:new Array(85).fill(0),Caffeine:new Array(85).fill(0)};
-fillRange(targets.Prafamax,1,14,400);fillRange(targets.Prafamax,15,28,200);fillRange(targets.Prafamax,29,42,100);
-fillRange(targets.Armodacure,1,14,300);fillRange(targets.Armodacure,15,28,225);fillRange(targets.Armodacure,29,42,150);fillRange(targets.Armodacure,43,70,75);
-fillRange(targets.NightCalm,1,14,12);fillRange(targets.NightCalm,15,28,9);fillRange(targets.NightCalm,29,42,6);fillRange(targets.NightCalm,43,56,3);fillRange(targets.NightCalm,57,63,2);fillRange(targets.NightCalm,64,70,1);
-fillRange(targets.Gabapentin,1,14,2400);fillRange(targets.Gabapentin,15,28,1600);fillRange(targets.Gabapentin,29,42,800);for(let d=43;d<=56;d++)targets.Gabapentin[d]=(d%2)?800:0;
-fillRange(targets.Caffeine,1,14,300);fillRange(targets.Caffeine,15,28,200);fillRange(targets.Caffeine,29,42,150);fillRange(targets.Caffeine,43,56,100);fillRange(targets.Caffeine,57,84,80);
-/* ===== البيانات ===== */
-function loadAll(){const r=localStorage.getItem(LS_DATA);return r?JSON.parse(r):{};}
-function saveAll(o){localStorage.setItem(LS_DATA,JSON.stringify(o));}
-function getDayData(i){const a=loadAll();return a[i]||{meds:{},kpi:{},sup:{},notes:"",mood:3};}
-function setDayData(i,d){const a=loadAll();a[i]=d;saveAll(a);}
-/* ===== المخزون ===== */
-function defaultInv(){return{Prafamax:{mgPerTab:200,tabsPerBox:10,boxes:0,looseTabs:0,alertTabs:6},Armodacure:{mgPerTab:150,tabsPerBox:30,boxes:0,looseTabs:0,alertTabs:6},NightCalm:{mgPerTab:3,tabsPerBox:20,boxes:0,looseTabs:0,alertTabs:6},Gabapentin:{mgPerTab:800,tabsPerBox:30,boxes:0,looseTabs:0,alertTabs:6},Caffeine:{mgPerTab:200,tabsPerBox:0,boxes:0,looseTabs:0,alertTabs:0}};}
-function getInv(){const r=localStorage.getItem(LS_INV);return r?JSON.parse(r):defaultInv();}
-function saveInv(o){localStorage.setItem(LS_INV,JSON.stringify(o));}
-function totalTabsLeft(inv,k){const p=inv[k].tabsPerBox||0,b=(inv[k].boxes||0)*p,l=inv[k].looseTabs||0;return Math.round((b+l)*1000)/1000;}
-function daysLeft(drug, day){const inv=getInv(),tabs=totalTabsLeft(inv,drug),mgLeft=tabs*inv[drug].mgPerTab;let need=0;for(let d=day;d<=84;d++)need+=targets[drug][d]||0;return need>0?Math.floor(mgLeft/(need/(84-day+1))):999;}
-/* ===== العناصر ===== */
-const els={startDateLabel:document.getElementById("startDateLabel"),dayIdxLabel:document.getElementById("dayIdxLabel"),weekLabel:document.getElementById("weekLabel"),weekPhase:document.getElementById("weekPhase"),targetsText:document.getElementById("targetsText"),progressBar:document.getElementById("progressBar"),progressText:document.getElementById("progressText"),drugTableBody:document.querySelector("#drugTable tbody"),invTableBody:document.querySelector("#invTable tbody"),saveMsg:document.getElementById("saveMsg"),supAM:document.getElementById("supAM"),supNoon:document.getElementById("supNoon"),supPM:document.getElementById("supPM"),supBed:document.getElementById("supBed"),notes:document.getElementById("notes"),kpiEnergy:document.getElementById("kpiEnergy"),kpiSleep:document.getElementById("kpiSleep"),kpiAnxiety:document.getElementById("kpiAnxiety"),kpiGut:document.getElementById("kpiGut")};
-const DRUGS=[{key:"Prafamax",label:"Prafamax (Modafinil)"},{key:"Armodacure",label:"Armodacure (Armodafinil)"},{key:"NightCalm",label:"Night Calm (Zopiclone)"},{key:"Gabapentin",label:"Gabapentin"},{key:"Caffeine",label:"Caffeine (حد أقصى)"}];
-let currentDay = getDayIndex();
-let chartInstance = null;
-/* ===== الرسم البياني ===== */
-function renderChart(){const ctx=document.getElementById('chart').getContext('2d');if(chartInstance)chartInstance.destroy();chartInstance=new Chart(ctx,{type:'line',data:{labels:Array.from({length:84},(_,i)=>i+1),datasets:[{label:'Prafamax',data:targets.Prafamax.slice(1),borderColor:'#4ade80',tension:0.3,fill:false},{label:'Armodacure',data:targets.Armodacure.slice(1),borderColor:'#60a5fa',tension:0.3,fill:false}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}},maintainAspectRatio:false}});}
-/* ===== التقديم ===== */
-function renderAll(day = currentDay){currentDay=day;const start=getStartDate();els.startDateLabel.textContent=start.toLocaleDateString('ar-EG');els.dayIdxLabel.textContent=day+(day!==getDayIndex()?" (عرض)":"");els.weekLabel.textContent=weekOf(day);const phases=["","بدء قوي","تخفيض أولي","استقرار","تخفيض متوسط","يوم بعد يوم","نهائي","صيانة","مكتمل"];els.weekPhase.textContent=phases[weekOf(day)]||"مكتمل";const t={P:targets.Prafamax[day],A:targets.Armodacure[day],N:targets.NightCalm[day],G:targets.Gabapentin[day],C:targets.Caffeine[day]};els.targetsText.innerHTML=`Prafamax: <b>${t.P}</b>mg — Armodacure: <b>${t.A}</b>mg — NightCalm: <b>${t.N}</b>mg — Gabapentin: <b>${t.G}</b>mg — كافيين ≤ <b>${t.C}</b>mg.`+(weekOf(day)>=11?' <i class="sub">ملاحظة: 75mg Armodacure مرتين/أسبوع</i>':'');els.drugTableBody.innerHTML="";const dd=getDayData(day);let achieved=0;const inv=getInv();DRUGS.forEach(dr=>{const target=targets[dr.key][day]??0,val=(dd.meds&&dd.meds[dr.key]!==undefined)?dd.meds[dr.key]:"",tabsLeft=dr.key==="Caffeine"?"-":totalTabsLeft(inv,dr.key),days=dr.key==="Caffeine"?"-":daysLeft(dr.key,day),tr=document.createElement("tr");tr.innerHTML=`<td style="text-align:right">${dr.label}</td><td>${target}</td><td><input type="text" inputmode="numeric" style="width:100px" value="${val}" data-key="${dr.key}" class="doseInput"></td><td class="sub" id="warn_${dr.key}"></td><td id="left_${dr.key}">${tabsLeft}</td><td id="days_${dr.key}">${days>=999?"∞":days<7?`<span class="bad">تنبيه ${days} أيام</span>`:days+" أيام"}</td>`;els.drugTableBody.appendChild(tr);const inp=tr.querySelector(".doseInput");inp.addEventListener("input",e=>{const k=e.target.dataset.key,v=parseNum(e.target.value),warn=document.getElementById("warn_"+k);if(v===""){warn.textContent="";warn.className="sub";return;}if(k!=="Caffeine"&&v>target){warn.textContent="تجاوز!";warn.className="bad";}else if(k==="Caffeine"&&v>target){warn.textContent="زيادة!";warn.className="bad";}else{warn.textContent="";warn.className="sub";}});if(target===0){if(val!==""&&Number(val)===0)achieved++;}else{const n=parseNum(val);if(n!==""&&n<=target+1e-6)achieved++;}});els.progressBar.style.width=(Math.round((achieved/DRUGS.length)*100))+"%";els.progressText.textContent=Math.round((achieved/DRUGS.length)*100)+"%";els.supAM.checked=!!dd.sup?.AM;els.supNoon.checked=!!dd.sup?.Noon;els.supPM.checked=!!dd.sup?.PM;els.supBed.checked=!!dd.sup?.Bed;els.notes.value=dd.notes||"";els.kpiEnergy.value=dd.kpi?.energy??"";els.kpiSleep.value=dd.kpi?.sleep??"";els.kpiAnxiety.value=dd.kpi?.anxiety??"";els.kpiGut.value=dd.kpi?.gut??"";setMood(dd.mood??3);renderInventoryTable();renderChart();}
-/* ===== جدول المخزون ===== */
-function renderInventoryTable(){const inv=getInv();els.invTableBody.innerHTML="";DRUGS.filter(d=>d.key!=="Caffeine").forEach(dr=>{const tabs=totalTabsLeft(inv,dr.key),low=(inv[dr.key].alertTabs||0)>0&&tabs<=inv[dr.key].alertTabs,days=daysLeft(dr.key,currentDay),tr=document.createElement("tr");tr.innerHTML=`<td style="text-align:right">${dr.label}</td><td>${inv[dr.key].mgPerTab||0}</td><td>${inv[dr.key].tabsPerBox||0}</td><td>${inv[dr.key].boxes||0}</td><td>${tabs}</td><td>${days>=999?"∞":days<7?`<span class="bad">تنبيه ${days}</span>`:days}</td><td class="${low?'bad':'sub'}">${low?'نفاد قريب':''}</td>`;els.invTableBody.appendChild(tr);});}
-/* ===== حفظ اليوم ===== */
-document.getElementById("saveDay").addEventListener("click",()=>{const idx=currentDay,data=getDayData(idx);data.meds=data.meds||{};const inv=getInv();document.querySelectorAll(".doseInput").forEach(inp=>{const k=inp.dataset.key,v=parseNum(inp.value);data.meds[k]=v;if(k!=="Caffeine"&&v&&inv[k]&&inv[k].mgPerTab>0){const used=v/inv[k].mgPerTab;let t=totalTabsLeft(inv,k)-used;if(t<0)t=0;const p=inv[k].tabsPerBox||1;inv[k].boxes=Math.floor(t/p);inv[k].looseTabs=Math.round((t-inv[k].boxes*p)*1000)/1000;}});data.sup={AM:els.supAM.checked,Noon:els.supNoon.checked,PM:els.supPM.checked,Bed:els.supBed.checked};data.kpi={energy:parseNum(els.kpiEnergy.value),sleep:parseNum(els.kpiSleep.value),anxiety:parseNum(els.kpiAnxiety.value),gut:parseNum(els.kpiGut.value)};data.notes=els.notes.value;data.mood=currentMood;setDayData(idx,data);saveInv(inv);els.saveMsg.textContent="تم الحفظ ✅";setTimeout(()=>{els.saveMsg.textContent="";},1500);DRUGS.filter(d=>d.key!=="Caffeine").forEach(dr=>{const c=document.getElementById("left_"+dr.key);if(c)c.textContent=totalTabsLeft(inv,dr.key);});renderInventoryTable();renderAll();});
-/* ===== التنقل ===== */
-document.getElementById("prevDay").onclick=()=>{currentDay=Math.max(1,currentDay-1);renderAll();};document.getElementById("nextDay").onclick=()=>{currentDay=Math.min(84,currentDay+1);renderAll();};
-/* ===== الوضع الليلي ===== */
-document.getElementById("darkMode").onclick=()=>{document.body.classList.toggle("night");localStorage.setItem(LS_DARK,document.body.classList.contains("night"));};if(localStorage.getItem(LS_DARK)==="true")document.body.classList.add("night");
-/* ===== المزاج ===== */
-let currentMood=3;function setMood(m){currentMood=m;document.querySelectorAll('.mood').forEach(el=>el.classList.remove('active'));document.getElementById(`mood_${m}`).classList.add('active');}
-/* ===== المخزون ===== */
-document.getElementById("openInv").addEventListener("click",()=>{const inv=getInv(),form=document.getElementById("invForm");form.innerHTML="";DRUGS.filter(d=>d.key!=="Caffeine").forEach(dr=>{const i=inv[dr.key]||{},row=document.createElement("div");row.className="grid";row.style.gridTemplateColumns="repeat(5,1fr)";row.style.gap="8px";row.style.marginBottom="10px";row.innerHTML=`<div style="grid-column:span 5"><b>${dr.label}</b></div><div><label>mg/قرص</label><input data-k="${dr.key}" data-f="mgPerTab" type="number" min="1" value="${i.mgPerTab||0}"></div><div><label>أقراص/علبة</label><input data-k="${dr.key}" data-f="tabsPerBox" type="number" min="1" value="${i.tabsPerBox||0}"></div><div><label>عدد العلب</label><input data-k="${dr.key}" data-f="boxes" type="number" min="0" value="${i.boxes||0}"></div><div><label>أقراص مفردة</label><input data-k="${dr.key}" data-f="looseTabs" type="number" min="0" step="0.5" value="${i.looseTabs||0}"></div><div><label>حد تنبيه</label><input data-k="${dr.key}" data-f="alertTabs" type="number" min="0" value="${i.alertTabs||0}"></div>`;form.appendChild(row);});document.getElementById("invDlg").showModal();});
-document.getElementById("saveInv").addEventListener("click",()=>{const inv=getInv();document.getElementById("invForm").querySelectorAll("input").forEach(inp=>{const k=inp.dataset.k,f=inp.dataset.f;if(k&&f)inv[k][f]=Number(inp.value)||0;});saveInv(inv);document.getElementById("invDlg").close();renderAll();});
-/* ===== التذكيرات ===== */
-document.getElementById("openRem").addEventListener("click",()=>{const r=JSON.parse(localStorage.getItem(LS_REM)||'{}');document.getElementById("remAM").value=r.AM||"";document.getElementById("remNoon").value=r.Noon||"";document.getElementById("remPM").value=r.PM||"";document.getElementById("remBed").value=r.Bed||"";document.getElementById("remEnable").checked=!!r.enable;document.getElementById("remDlg").showModal();});
-document.getElementById("saveRem").addEventListener("click",()=>{const r={AM:document.getElementById("remAM").value.trim(),Noon:document.getElementById("remNoon").value.trim(),PM:document.getElementById("remPM").value.trim(),Bed:document.getElementById("remBed").value.trim(),enable:document.getElementById("remEnable").checked};localStorage.setItem(LS_REM,JSON.stringify(r));document.getElementById("remDlg").close();alert("تم حفظ التذكيرات ✅");});
-function timesEqualNow(t){if(!t)return false;const [h,m]=t.split(":");if(h===undefined)return false;const n=new Date();return n.getHours()==Number(h)&&n.getMinutes()==Number(m);}
-function beep(){try{const ctx=new AudioContext(),o=ctx.createOscillator(),g=ctx.createGain();o.type="sine";o.frequency.value=880;o.connect(g);g.connect(ctx.destination);g.gain.setValueAtTime(0.001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.3,ctx.currentTime+0.02);o.start();setTimeout(()=>{g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+0.4);o.stop(ctx.currentTime+0.45);},400);}catch(e){}}
-function reminderLoop(){const r=JSON.parse(localStorage.getItem(LS_REM)||'{}');if(!r.enable)return;if(timesEqualNow(r.AM)||timesEqualNow(r.Noon)||timesEqualNow(r.PM)||timesEqualNow(r.Bed)){beep();const box=document.createElement("div");box.textContent="تنبيه الوقت الآن";box.style.cssText="position:fixed;bottom:16px;left:16px;background:#12311e;border:1px solid #1f7a3e;padding:10px 12px;border-radius:10px;z-index:9999;color:#fff;font-size:13px;";document.body.appendChild(box);setTimeout(()=>box.remove(),6000);}}
-setInterval(reminderLoop,60000);
-/* ===== أزرار عامة ===== */
-document.getElementById("resetStart").addEventListener("click",()=>{const s=prompt("أدخل تاريخ البدء (YYYY-MM-DD) أو اتركه فارغ لليوم:", "");if(s===null)return;const d=s.trim()?new Date(s+"T00:00:00"):new Date();if(isNaN(d))return alert("تاريخ غير صالح");setStartDate(d);});
-document.getElementById("wipe").addEventListener("click",()=>{if(confirm("مسح كل البيانات؟")){localStorage.removeItem(LS_DATA);localStorage.removeItem(LS_INV);renderAll();}});
-document.getElementById("exportCsv").addEventListener("click",()=>{const all=loadAll();let csv="Day,Date,Week,Prafamax,Armodacure,NightCalm,Gabapentin,Caffeine,Supp_AM,Supp_Noon,Supp_PM,Supp_Bed,Energy,Sleep,Anxiety,Gut,Mood,Notes\n";for(let d=1;d<=84;d++){const date=new Date(getStartDate().getTime()+(d-1)*86400000).toISOString().slice(0,10),row=all[d]||{},meds=row.meds||{},sup=row.sup||{},k=row.kpi||{};csv+=[d,date,weekOf(d),meds.Prafamax??"",meds.Armodacure??"",meds.NightCalm??"",meds.Gabapentin??"",meds.Caffeine??"",sup.AM?1:0,sup.Noon?1:0,sup.PM?1:0,sup.Bed?1:0,k.energy??"",k.sleep??"",k.anxiety??"",k.gut??"",row.mood??"",'"'+(row.notes||"").replace(/"/g,'""')+'"\n'].join(",");}const blob=new Blob([csv],{type:"text/csv;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="تعافي84_تقرير.csv";a.click();URL.revokeObjectURL(a.href);});
-document.getElementById("exportPdf").addEventListener("click",()=>{const {jsPDF}=window.jspdf,doc=new jsPDF();doc.setFont("Amiri","normal");doc.text("تقرير تعافي 84",105,10,null,null,"center");let y=20;for(let d=1;d<=84;d++){const data=getDayData(d),meds=data.meds||{},sup=data.sup||{},k=data.kpi||{};if(Object.keys(meds).length===0&&data.notes==="")continue;doc.text(`يوم ${d} - ${new Date(getStartDate().getTime()+(d-1)*86400000).toLocaleDateString('ar-EG')}`,10,y);y+=7;doc.text(`P: ${meds.Prafamax||0} | A: ${meds.Armodacure||0} | N: ${meds.NightCalm||0} | G: ${meds.Gabapentin||0}`,10,y);y+=7;if(data.notes)doc.text(data.notes.substring(0,100)+(data.notes.length>100?"...":""),10,y);y+=10;if(y>270){doc.addPage();y=20;}}doc.save("تعافي84_تقرير.pdf");});
-/* ===== الكتابة الصوتية ===== */
-document.getElementById("voiceNote").addEventListener("click",()=>{if(!('SpeechRecognition' in window || 'webkitSpeechRecognition' in window))return alert("الميكروفون غير مدعوم");const recog=new (window.SpeechRecognition || window.webkitSpeechRecognition)();recog.lang="ar-SA";recog.onresult=e=>{els.notes.value+=(e.results[0][0].transcript)+" ";els.notes.focus();};recog.onerror=()=>{alert("فشل التعرف");};recog.start();});
-/* ===== الحفظ التلقائي ===== */
-setInterval(()=>{if(document.getElementById("saveDay"))document.getElementById("saveDay").click();},30000);
-/* ===== PWA ===== */
-if('serviceWorker' in navigator){navigator.serviceWorker.register('data:application/javascript,self.addEventListener("install",e=>self.skipWaiting());');}
-/* ===== تشغيل ===== */
-renderAll();setInterval(()=>{if(getDayIndex()!==currentDay)renderAll();},60000);
+const IMPORTED = [{"id":19,"subject":"19 ما أبلغت به رئاسة المجلس بخصوص تعدي امين ثابت وحدة كفر شاهين","referral_date":"2026-01-01","entity":"وزارة التنمية المحلية","disposition":"حفظ إداري","disposition_date":"2026-04-08","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":20,"subject":"20 شكوى ممرضة هدي تضرر من تذاكر مستشفى زفتى","referral_date":"2026-01-01","entity":"وزارة الصحة والسكان","disposition":"حفظ لعدم الأهمية","disposition_date":"2026-04-19","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":21,"subject":"21 شكوى محمد صوابي عتريس","referral_date":"2026-01-01","entity":"وزارة التنمية المحلية","disposition":"حفظ إداري","disposition_date":"2026-04-19","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":22,"subject":"22 متغير المكاني رقم 607580 بناحية الشبرا ملس","referral_date":"2026-01-01","entity":"وزارة التنمية المحلية","disposition":"تحقيق","disposition_date":"2026-02-23","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":23,"subject":"23 بلاغ ضد مسعد فتحي لزرع أعمدة سنبو الكبرى","referral_date":"2026-01-01","entity":"وزارة التنمية المحلية","disposition":"حفظ إداري","disposition_date":"","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":24,"subject":"24 شكوى احمد ابو الفتوح معلم ضد المدرسة عبير","referral_date":"2026-01-01","entity":"وزارة التربية والتعليم والتعليم الفني","disposition":"حفظ إداري","disposition_date":"2026-02-23","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":25,"subject":"25 اعمال صيرافية شبراملس عوائد عن عام 2024،","referral_date":"2026-01-01","entity":"الضرائب العقارية","disposition":"حفظ إداري","disposition_date":"2026-03-28","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":26,"subject":"26 افراد 302 رصف الطرق","referral_date":"2026-01-01","entity":"وزارة التنمية المحلية","disposition":"حفظ إداري","disposition_date":"2026-02-23","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":27,"subject":"افراد 771 لسنة 2025 الزراعة انقطاع العامل سعد عن العمل دون انهاء خدمته","referral_date":"2026-01-01","entity":"وزارة الزراعة واستصلاح الأراضي","disposition":"تحقيق","disposition_date":"","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":141,"subject":"141 شكوى فقد ملف التصالح الخاص بالمواطن عزت الخولي","referral_date":"2026-02-01","entity":"داخلي","disposition":"حفظ إداري","disposition_date":"2026-03-31","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":138,"subject":"افراد شكوى خديجة ضد مدير مدرسة 748","referral_date":"2026-02-01","entity":"وزارة التربية والتعليم والتعليم الفني","disposition":"حفظ إداري","disposition_date":"2026-02-23","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":151,"subject":"151 ش عبد العظيم عمر عبد العظيم فتوح الوحدة المحلية بقرية سنبو الكبرى، المواطن عبد النبي سالم خميس","referral_date":"2026-02-01","entity":"وزارة التنمية المحلية","disposition":"حفظ إداري","disposition_date":"2026-04-19","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":152,"subject":"152 شكوى حسن طه حسن لعدم الحاق نجلته بالمدرسة القريبة","referral_date":"2026-02-01","entity":"وزارة التربية والتعليم والتعليم الفني","disposition":"حفظ إداري","disposition_date":"2026-04-03","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":153,"subject":"153 شكوى سعد طه سعد ضد موجه المكتبات","referral_date":"2026-02-01","entity":"وزارة التربية والتعليم والتعليم الفني","disposition":"حفظ إداري","disposition_date":"2026-03-01","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":142,"subject":"142 افراد تامر عبدالحميد","referral_date":"2026-02-01","entity":"وزارة الموارد المائية والري","disposition":"حفظ إداري","disposition_date":"2026-04-27","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":225,"subject":"225 بلاغ مديرية الصحة بشأن ملاحظة الجهاز المركزي علي منظومة النظافة بمستشفى زفتى العام","referral_date":"2026-04-01","entity":"وزارة الصحة والسكان","disposition":"حفظ لعدم الأهمية","disposition_date":"2026-05-18","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":226,"subject":"226 افراد انقطاع احمد فريد توفيق الهلباوي","referral_date":"2026-03-01","entity":"وزارة الصحة والسكان","disposition":"تحقيق","disposition_date":"","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":227,"subject":"شكوى أسماء حسن الجوهري ضد المختصين بالتأمينات","referral_date":"2026-03-01","entity":"وزارة المالية","disposition":"حفظ لعدم الأهمية","disposition_date":"2026-05-18","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":241,"subject":"241 قسائم التحصيل الممزقة والتأخر في التحصيل مستشفى زفتى","referral_date":"2026-04-01","entity":"وزارة الصحة والسكان","disposition":"حفظ لعدم الأهمية","disposition_date":"2026-05-18","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":269,"subject":"269 بلاغ المتغيرات المكانية رقم 202177 بندر زفتى","referral_date":"2026-03-01","entity":"وزارة التنمية المحلية","disposition":"حفظ إداري","disposition_date":"2026-04-27","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":287,"subject":"بلاغ الصحة بشأن مستحقات النفايات","referral_date":"2026-04-01","entity":"وزارة الصحة والسكان","disposition":"حفظ لعدم الأهمية","disposition_date":"2026-04-27","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":288,"subject":"بلاغ الطب البيطري التعدي علي مديرة المدرسة","referral_date":"2026-04-01","entity":"وزارة الزراعة واستصلاح الأراضي","disposition":"اختصاص","disposition_date":"2026-04-27","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":289,"subject":"شكوى أحمد السعيد محمد سويلم ضد المختصين بوحدة سنباط","referral_date":"2026-04-01","entity":"وزارة التنمية المحلية","disposition":"حفظ إداري","disposition_date":"2026-04-27","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":400,"subject":"متغيرات","referral_date":"2026-05-05","entity":"وزارة التنمية المحلية","disposition":"حفظ إداري","disposition_date":"2026-05-18","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":341,"subject":"بلاغ ضرائب","referral_date":"2026-05-03","entity":"وزارة المالية","disposition":"حفظ إداري","disposition_date":"2026-05-18","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]},
+{"id":440,"subject":"بلاغ زراعة","referral_date":"2026-05-03","entity":"وزارة الزراعة واستصلاح الأراضي","disposition":"حفظ إداري","disposition_date":"2026-06-01","memo_link":"","memo_doc_link":"","session_date":"","requirees":[]}];
+
+const STORAGE_KEY = 'zafta_cases_2026_v2';
+const PAGE_SIZE = 15;
+let page = 1;
+let editingId = null;
+let formRequirees = [];
+
+function loadCases(){
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if(raw){
+    try { return JSON.parse(raw); } catch(e){ return IMPORTED; }
+  }
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(IMPORTED));
+  return IMPORTED;
+}
+function saveCases(data){ localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }
+function getCases(){ return loadCases(); }
+
+function daysBetween(d1, d2){
+  if(!d1) return null;
+  const a = new Date(d1), b = d2 ? new Date(d2) : new Date();
+  return Math.round((b - a) / 86400000);
+}
+function badgeClass(d){
+  if(d === 'تحقيق') return 'b-tahqiq';
+  if(d === 'عرض') return 'b-ard';
+  if(d === 'حفظ لعدم الأهمية') return 'b-hafz2';
+  if(d === 'اختصاص') return 'b-ikhtisas';
+  return 'b-hafz';
+}
+function fmtDate(s){
+  if(!s) return '—';
+  const [y,m,dd] = s.split('-');
+  return `${dd}/${m}/${y}`;
+}
+function esc(s){
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function getFiltered(){
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const fe = document.getElementById('flt-entity').value;
+  const fd = document.getElementById('flt-disp').value;
+  const srt = document.getElementById('sort').value;
+  let data = getCases();
+  if(q) data = data.filter(c => c.id.toString().includes(q) || (c.subject||'').toLowerCase().includes(q));
+  if(fe) data = data.filter(c => c.entity === fe);
+  if(fd) data = data.filter(c => c.disposition === fd);
+  data = data.slice();
+  if(srt === 'id-asc') data.sort((a,b)=>a.id-b.id);
+  else if(srt === 'id-desc') data.sort((a,b)=>b.id-a.id);
+  else if(srt === 'date-desc') data.sort((a,b)=>(b.referral_date||'').localeCompare(a.referral_date||''));
+  else if(srt === 'date-asc') data.sort((a,b)=>(a.referral_date||'').localeCompare(b.referral_date||''));
+  else if(srt === 'days-desc') data.sort((a,b)=>(daysBetween(b.referral_date,b.disposition_date)||0)-(daysBetween(a.referral_date,a.disposition_date)||0));
+  return data;
+}
+
+function updateStats(){
+  const all = getCases();
+  const pending = all.filter(c => c.disposition === 'تحقيق' && !c.disposition_date);
+  const ard = all.filter(c => c.disposition === 'عرض');
+  const done = all.filter(c => c.disposition_date && c.disposition !== 'عرض');
+  const avgDays = done.length ? Math.round(done.reduce((s,c)=>s+(daysBetween(c.referral_date,c.disposition_date)||0),0)/done.length) : 0;
+  const rate = all.length ? Math.round((done.length/all.length)*100) : 0;
+  document.getElementById('s-total').textContent = all.length;
+  document.getElementById('s-pending').textContent = pending.length;
+  document.getElementById('s-ard').textContent = ard.length;
+  document.getElementById('s-done').textContent = done.length;
+  document.getElementById('s-rate').textContent = rate + '%';
+  document.getElementById('s-days').textContent = avgDays;
+  document.getElementById('case-count-sub').textContent = `إجمالي ${all.length} قضية — ${pending.length} قيد التحقيق — ${ard.length} عرض — نسبة الإنجاز ${rate}%`;
+}
+
+function fillEntityFilter(){
+  const entities = [...new Set(getCases().map(c=>c.entity).filter(Boolean))].sort();
+  const sel = document.getElementById('flt-entity');
+  const cur = sel.value;
+  sel.innerHTML = '<option value="">كل الجهات</option>';
+  entities.forEach(e => {
+    const o = document.createElement('option');
+    o.value = e; o.textContent = e;
+    if(e===cur) o.selected = true;
+    sel.appendChild(o);
+  });
+}
+
+function render(){
+  page = 1;
+  renderTable();
+  renderAgenda();
+  updateStats();
+  fillEntityFilter();
+}
+
+function renderTable(){
+  const filtered = getFiltered();
+  const total = filtered.length;
+  const pages = Math.ceil(total / PAGE_SIZE) || 1;
+  if(page > pages) page = pages;
+  const slice = filtered.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE);
+
+  const tbody = document.getElementById('tbl-body');
+  if(!slice.length){
+    tbody.innerHTML = '<tr><td colspan="8" class="no-data">لا توجد قضايا مطابقة</td></tr>';
+  } else {
+    tbody.innerHTML = slice.map(c => {
+      const days = daysBetween(c.referral_date, c.disposition_date||null);
+      const daysStr = days !== null ? `<span class="day-badge">${days} يوم</span>` : '—';
+      const memoIcon = c.memo_doc_link
+        ? `<a href="${esc(c.memo_doc_link)}" class="icon-link" target="_blank" rel="noopener" title="فتح ملف المذكرة">📄 المذكرة</a>`
+        : `<span class="icon-link muted">— لا يوجد</span>`;
+      const reqCount = (c.requirees||[]).length;
+      return `<tr>
+        <td style="font-weight:600">${c.id}</td>
+        <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(c.subject)}">${esc(c.subject)}</td>
+        <td><span class="entity-tag">${esc(c.entity)||'—'}</span></td>
+        <td>${fmtDate(c.referral_date)}</td>
+        <td><span class="badge ${badgeClass(c.disposition)}">${esc(c.disposition)}</span></td>
+        <td>${daysStr}</td>
+        <td>${memoIcon}${reqCount?`<br><span class="day-badge" title="عدد المطلوبين" style="margin-top:4px;display:inline-block">${reqCount} مطلوب</span>`:''}</td>
+        <td><button class="btn sm" onclick="openEdit(${c.id})">✎</button></td>
+      </tr>`;
+    }).join('');
+  }
+
+  const pagesEl = document.getElementById('pages');
+  if(pages <= 1){ pagesEl.innerHTML = `<span>${total} نتيجة</span>`; return; }
+  pagesEl.innerHTML = `
+    <button class="btn sm" onclick="goPage(${page-1})" ${page===1?'disabled':''}>›</button>
+    <span>صفحة ${page} من ${pages} &nbsp;(${total} نتيجة)</span>
+    <button class="btn sm" onclick="goPage(${page+1})" ${page===pages?'disabled':''}>‹</button>
+  `;
+}
+
+function attLabel(s){
+  if(s==='حضر') return '<span class="att-state att-yes">حضر</span>';
+  if(s==='لم يحضر') return '<span class="att-state att-no">لم يحضر</span>';
+  return '<span class="att-state att-pending">لم يُخطر</span>';
+}
+
+function renderAgenda(){
+  const today = new Date().toISOString().split('T')[0];
+  const all = getCases().filter(c => (c.disposition === 'تحقيق' || c.disposition === 'عرض') && c.session_date && c.session_date >= today);
+  all.sort((a,b)=>a.session_date.localeCompare(b.session_date));
+  const cont = document.getElementById('agenda-cont');
+  if(!all.length){
+    cont.innerHTML = '<div class="no-data" style="background:var(--card);border:1px solid var(--border-soft);border-radius:12px">لا توجد جلسات قادمة مجدولة لقضايا قيد التحقيق</div>';
+    return;
+  }
+  const weekFromNow = new Date(Date.now() + 7*86400000).toISOString().split('T')[0];
+  cont.innerHTML = all.map(c => {
+    const urgent = c.session_date <= weekFromNow;
+    const reqs = c.requirees || [];
+    const reqHtml = reqs.length
+      ? `<div class="req-list-view">${reqs.map(r => `
+          <div class="req-item-view">
+            <span><strong>${esc(r.name)||'—'}</strong>${r.role?' — '+esc(r.role):''}${r.phone?' · '+esc(r.phone):''}</span>
+            ${attLabel(r.attendance)}
+          </div>`).join('')}</div>`
+      : '<div style="font-size:12px;color:var(--text-faint)">لا يوجد مطلوبون مسجلون لهذه القضية</div>';
+    return `<div class="agenda-card ${urgent?'urgent':''}">
+      <div class="agenda-head">
+        <span class="id">قضية #${c.id}</span>
+        <span class="date">📅 ${fmtDate(c.session_date)}${urgent?' — قريباً':''}</span>
+      </div>
+      <div class="agenda-subj">${esc(c.subject)}</div>
+      ${reqHtml}
+    </div>`;
+  }).join('');
+}
+
+function goPage(p){ page = p; renderTable(); }
+
+function renderRequireesForm(){
+  const cont = document.getElementById('req-form-list');
+  if(!formRequirees.length){
+    cont.innerHTML = '<div class="empty-req">لا يوجد مطلوبون مضافون بعد</div>';
+    return;
+  }
+  cont.innerHTML = formRequirees.map((r,i) => `
+    <div class="req-row">
+      <input placeholder="الاسم" value="${esc(r.name)}" oninput="formRequirees[${i}].name=this.value">
+      <input placeholder="الصفة/الوظيفة" value="${esc(r.role)}" oninput="formRequirees[${i}].role=this.value">
+      <input placeholder="الهاتف" value="${esc(r.phone)}" oninput="formRequirees[${i}].phone=this.value">
+      <select onchange="formRequirees[${i}].attendance=this.value">
+        <option value="لم يُخطر" ${r.attendance==='لم يُخطر'||!r.attendance?'selected':''}>لم يُخطر</option>
+        <option value="حضر" ${r.attendance==='حضر'?'selected':''}>حضر</option>
+        <option value="لم يحضر" ${r.attendance==='لم يحضر'?'selected':''}>لم يحضر</option>
+      </select>
+      <span class="rm" onclick="removeRequiree(${i})" title="حذف">✕</span>
+    </div>`).join('');
+}
+function addRequiree(){
+  formRequirees.push({name:'',role:'',phone:'',attendance:'لم يُخطر'});
+  renderRequireesForm();
+}
+function removeRequiree(i){
+  formRequirees.splice(i,1);
+  renderRequireesForm();
+}
+
+function openAdd(){
+  editingId = null;
+  formRequirees = [];
+  document.getElementById('modal-title').textContent = 'إضافة قضية جديدة';
+  document.getElementById('f-id').value = '';
+  document.getElementById('f-subject').value = '';
+  document.getElementById('f-entity').value = '';
+  document.getElementById('f-ref-date').value = new Date().toISOString().split('T')[0];
+  document.getElementById('f-disp').value = 'تحقيق';
+  document.getElementById('f-disp-date').value = '';
+  document.getElementById('f-memo').value = '';
+  document.getElementById('f-memo-doc').value = '';
+  document.getElementById('f-session-date').value = '';
+  document.getElementById('del-btn').style.display = 'none';
+  renderRequireesForm();
+  document.getElementById('modal').classList.add('show');
+}
+
+function openEdit(id){
+  const c = getCases().find(x=>x.id===id);
+  if(!c) return;
+  editingId = id;
+  formRequirees = JSON.parse(JSON.stringify(c.requirees||[]));
+  document.getElementById('modal-title').textContent = 'تعديل القضية #' + id;
+  document.getElementById('f-id').value = c.id;
+  document.getElementById('f-subject').value = c.subject;
+  document.getElementById('f-entity').value = c.entity;
+  document.getElementById('f-ref-date').value = c.referral_date;
+  document.getElementById('f-disp').value = c.disposition;
+  document.getElementById('f-disp-date').value = c.disposition_date;
+  document.getElementById('f-memo').value = c.memo_link||'';
+  document.getElementById('f-memo-doc').value = c.memo_doc_link||'';
+  document.getElementById('f-session-date').value = c.session_date||'';
+  document.getElementById('del-btn').style.display = 'inline-flex';
+  renderRequireesForm();
+  document.getElementById('modal').classList.add('show');
+}
+
+function closeModal(){ document.getElementById('modal').classList.remove('show'); }
+
+function saveCase(){
+  const id = parseInt(document.getElementById('f-id').value);
+  if(!id || isNaN(id)){ alert('رقم القضية مطلوب'); return; }
+  const entry = {
+    id,
+    subject: document.getElementById('f-subject').value.trim(),
+    entity: document.getElementById('f-entity').value.trim(),
+    referral_date: document.getElementById('f-ref-date').value,
+    disposition: document.getElementById('f-disp').value,
+    disposition_date: document.getElementById('f-disp-date').value,
+    memo_link: document.getElementById('f-memo').value.trim(),
+    memo_doc_link: document.getElementById('f-memo-doc').value.trim(),
+    session_date: document.getElementById('f-session-date').value,
+    requirees: formRequirees.filter(r=>r.name && r.name.trim())
+  };
+  let data = getCases();
+  if(editingId !== null){
+    data = data.map(c => c.id === editingId ? entry : c);
+  } else {
+    if(data.find(c=>c.id===id)){ alert('رقم القضية موجود بالفعل'); return; }
+    data.push(entry);
+  }
+  saveCases(data);
+  closeModal();
+  render();
+}
+
+function deleteCase(){
+  if(!confirm('هل تريد حذف هذه القضية؟')) return;
+  let data = getCases().filter(c => c.id !== editingId);
+  saveCases(data);
+  closeModal();
+  render();
+}
+
+function exportJson(){
+  const data = getCases();
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'نسخة_احتياطية_قضايا_زفتى_' + new Date().toISOString().split('T')[0] + '.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+const MONTH_NAMES = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+
+function openStats(){
+  renderEntityStats();
+  renderMonthStats();
+  renderPrintTable();
+  document.getElementById('print-date').textContent = 'تاريخ التقرير: ' + new Date().toLocaleDateString('ar-EG');
+  document.getElementById('stats-modal').classList.add('show');
+}
+function closeStats(){ document.getElementById('stats-modal').classList.remove('show'); }
+
+function renderEntityStats(){
+  const all = getCases();
+  const counts = {};
+  all.forEach(c => {
+    const e = c.entity || 'غير محدد';
+    counts[e] = (counts[e]||0) + 1;
+  });
+  const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+  const max = entries.length ? entries[0][1] : 1;
+  const cont = document.getElementById('entity-stats-cont');
+  if(!entries.length){ cont.innerHTML = '<div class="no-data">لا توجد بيانات</div>'; return; }
+  cont.innerHTML = entries.map(([name,count]) => `
+    <div class="entity-bar-row">
+      <span class="ename" title="${esc(name)}">${esc(name)}</span>
+      <div class="entity-bar-track"><div class="entity-bar-fill" style="width:${Math.round((count/max)*100)}%"></div></div>
+      <span class="entity-bar-count">${count}</span>
+    </div>`).join('');
+}
+
+function renderMonthStats(){
+  const all = getCases();
+  const months = {};
+  all.forEach(c => {
+    if(!c.referral_date) return;
+    const key = c.referral_date.slice(0,7);
+    if(!months[key]) months[key] = {referred:0, done:0};
+    months[key].referred++;
+    if(c.disposition_date && c.disposition !== 'عرض') months[key].done++;
+  });
+  const keys = Object.keys(months).sort();
+  const cont = document.getElementById('month-stats-cont');
+  if(!keys.length){ cont.innerHTML = '<div class="no-data">لا توجد بيانات</div>'; return; }
+  cont.innerHTML = keys.map(k => {
+    const [y,m] = k.split('-');
+    const mname = MONTH_NAMES[parseInt(m,10)-1] || m;
+    const d = months[k];
+    return `<div class="month-card">
+      <div class="mname">${mname} ${y}</div>
+      <div class="mrow"><span>محال</span><b>${d.referred}</b></div>
+      <div class="mrow"><span>منجز</span><b>${d.done}</b></div>
+    </div>`;
+  }).join('');
+}
+
+function renderPrintTable(){
+  const all = getCases().slice().sort((a,b)=>a.id-b.id);
+  const tbody = document.getElementById('print-table-body');
+  if(!all.length){ tbody.innerHTML = '<tr><td colspan="7" class="no-data">لا توجد بيانات</td></tr>'; return; }
+  tbody.innerHTML = all.map(c => {
+    const days = daysBetween(c.referral_date, c.disposition_date||null);
+    return `<tr>
+      <td>${c.id}</td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(c.subject)}</td>
+      <td>${esc(c.entity)||'—'}</td>
+      <td>${fmtDate(c.referral_date)}</td>
+      <td><span class="badge ${badgeClass(c.disposition)}">${esc(c.disposition)}</span></td>
+      <td>${fmtDate(c.disposition_date)}</td>
+      <td>${days!==null?days:'—'}</td>
+    </tr>`;
+  }).join('');
+}
+
+render();
 </script>
+
 
 </body></html>
